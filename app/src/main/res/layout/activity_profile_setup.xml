@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/profile_setup_scroll"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/skillloop_orange"
+    android:fillViewport="true"
+    android:overScrollMode="never">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingStart="20dp"
+        android:paddingTop="24dp"
+        android:paddingEnd="20dp"
+        android:paddingBottom="32dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/big_shoulders_extrabold"
+            android:includeFontPadding="false"
+            android:text="LET'S MAKE\nYOUR SPACE."
+            android:textColor="@color/skillloop_black"
+            android:textSize="42sp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Build a profile that helps the right people find you. You can edit it later."
+            android:textColor="@color/skillloop_black"
+            android:textSize="13sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/bg_discover_card"
+            android:orientation="vertical"
+            android:padding="18dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/setup_photo"
+                    android:layout_width="76dp"
+                    android:layout_height="76dp"
+                    android:background="@drawable/bg_discover_hero"
+                    android:contentDescription="Profile photo preview"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/skillloop_app_icon" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="14dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/big_shoulders_extrabold"
+                        android:text="YOUR FACE, YOUR CALL."
+                        android:textColor="@color/skillloop_black"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/setup_choose_photo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="40dp"
+                        android:gravity="center_vertical"
+                        android:text="ADD A PROFILE PHOTO  ↗"
+                        android:textColor="@color/skillloop_black"
+                        android:textSize="11sp"
+                        android:fontFamily="sans-serif-medium" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <EditText android:id="@+id/setup_name" style="@style/SkillLoopFormField" android:hint="Full name" android:inputType="textPersonName|textCapWords" />
+            <EditText android:id="@+id/setup_course" style="@style/SkillLoopFormField" android:hint="Course / academic branch" android:inputType="textCapSentences" />
+            <EditText android:id="@+id/setup_year" style="@style/SkillLoopFormField" android:hint="Year of study (e.g. Year 2)" android:inputType="textCapSentences" />
+            <EditText android:id="@+id/setup_domain" style="@style/SkillLoopFormField" android:hint="Domain (Technology, Design, Business...)" android:inputType="textCapWords" />
+            <EditText android:id="@+id/setup_bio" style="@style/SkillLoopFormFieldMulti" android:hint="A short bio" android:inputType="textCapSentences|textMultiLine" android:minLines="3" />
+            <EditText android:id="@+id/setup_teaches" style="@style/SkillLoopFormFieldMulti" android:hint="Skills I can teach (comma separated)" android:inputType="textCapSentences|textMultiLine" android:minLines="2" />
+            <EditText android:id="@+id/setup_learn" style="@style/SkillLoopFormFieldMulti" android:hint="Skills I want to learn (comma separated)" android:inputType="textCapSentences|textMultiLine" android:minLines="2" />
+            <EditText android:id="@+id/setup_project" style="@style/SkillLoopFormField" android:hint="Current project (optional)" android:inputType="textCapSentences" />
+            <EditText android:id="@+id/setup_interests" style="@style/SkillLoopFormField" android:hint="Interests (comma separated)" android:inputType="textCapSentences" />
+
+            <ProgressBar
+                android:id="@+id/setup_progress"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="match_parent"
+                android:layout_height="3dp"
+                android:layout_marginTop="12dp"
+                android:indeterminate="true"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/setup_save"
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/bg_discover_action_primary"
+                android:clickable="true"
+                android:focusable="true"
+                android:fontFamily="sans-serif-medium"
+                android:gravity="center"
+                android:text="SAVE PROFILE &amp; DISCOVER  ↗"
+                android:textColor="@color/skillloop_cream"
+                android:textSize="13sp" />
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

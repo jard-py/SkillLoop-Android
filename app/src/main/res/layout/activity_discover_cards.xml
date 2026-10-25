@@ -1,0 +1,483 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/discover_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#FF5A00"
+    android:paddingTop="4dp">
+
+    <TextView
+        android:id="@+id/discover_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginTop="4dp"
+        android:text="DISCOVER"
+        android:textColor="#171717"
+        android:textSize="28sp"
+        android:fontFamily="@font/big_shoulders_extrabold"
+        android:includeFontPadding="false" />
+
+    <TextView
+        android:id="@+id/discover_status"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginTop="1dp"
+        android:text="MATCH ENGINE · LIVE"
+        android:textColor="#171717"
+        android:textSize="9sp"
+        android:letterSpacing="0.10"
+        android:fontFamily="sans-serif-medium" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginTop="3dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Find your next skill exchange partner."
+            android:textColor="#171717"
+            android:textSize="13sp"
+            android:fontFamily="sans-serif-medium" />
+
+        <TextView
+            android:id="@+id/discover_filters_button"
+            android:layout_width="wrap_content"
+            android:layout_height="32dp"
+            android:layout_marginStart="8dp"
+            android:paddingStart="12dp"
+            android:paddingEnd="12dp"
+            android:gravity="center"
+            android:text="FILTERS  ⌄"
+            android:textColor="#171717"
+            android:textSize="10sp"
+            android:fontFamily="sans-serif-medium"
+            android:background="@drawable/bg_discover_nav_island"
+            android:clickable="true"
+            android:focusable="true" />
+    </LinearLayout>
+
+    <!-- Student card -->
+    <LinearLayout
+        android:id="@+id/discover_person_card"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginBottom="8dp"
+        android:orientation="vertical"
+        android:background="@drawable/bg_discover_card"
+        android:padding="10dp">
+
+        <!-- Student hero -->
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:minHeight="100dp"
+            android:background="@drawable/bg_discover_hero"
+            android:clipToOutline="true">
+
+            <ImageView
+                android:id="@+id/person_photo"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:contentDescription="Student profile photo"
+                android:scaleType="centerCrop"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/person_initials"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="AM"
+                android:textColor="#756657"
+                android:textSize="76sp"
+                android:fontFamily="@font/big_shoulders_extrabold"
+                android:includeFontPadding="false" />
+
+            <TextView
+                android:id="@+id/person_domain"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom|start"
+                android:layout_margin="12dp"
+                android:paddingStart="12dp"
+                android:paddingEnd="12dp"
+                android:paddingTop="7dp"
+                android:paddingBottom="7dp"
+                android:background="@drawable/bg_discover_badge"
+                android:text="TECHNOLOGY"
+                android:textColor="#FFFFFF"
+                android:textSize="10sp"
+                android:fontFamily="sans-serif-medium" />
+
+            <TextView
+                android:id="@+id/person_counter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="top|end"
+                android:layout_margin="10dp"
+                android:paddingStart="12dp"
+                android:paddingEnd="12dp"
+                android:paddingTop="7dp"
+                android:paddingBottom="7dp"
+                android:background="@drawable/bg_discover_counter"
+                android:text="01 / 11"
+                android:textColor="#171717"
+                android:textSize="11sp" />
+
+        </FrameLayout>
+
+        <TextView
+            android:id="@+id/person_course"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="COMPUTER ENGINEERING · YEAR 3"
+            android:textColor="#716B62"
+            android:textSize="10sp"
+            android:letterSpacing="0.035" />
+
+        <TextView
+            android:id="@+id/person_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="3dp"
+            android:text="AARAV MEHTA."
+            android:textColor="#171717"
+            android:textSize="32sp"
+            android:fontFamily="@font/big_shoulders_extrabold"
+            android:includeFontPadding="false" />
+
+        <TextView
+            android:id="@+id/person_bio"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="3dp"
+            android:maxLines="2"
+            android:ellipsize="end"
+            android:text="Building things. Learning constantly."
+            android:textColor="#393939"
+            android:textSize="13sp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="9dp"
+            android:background="#D8D2C8" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="CAN TEACH"
+            android:textColor="#716B62"
+            android:textSize="10sp"
+            android:letterSpacing="0.08" />
+
+        <TextView
+            android:id="@+id/person_teaches"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="3dp"
+            android:maxLines="1"
+            android:ellipsize="end"
+            android:text="Python · Machine Learning"
+            android:textColor="#171717"
+            android:textSize="15sp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="9dp"
+            android:text="WANTS TO LEARN"
+            android:textColor="#716B62"
+            android:textSize="10sp"
+            android:letterSpacing="0.08" />
+
+        <TextView
+            android:id="@+id/person_wants"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="3dp"
+            android:maxLines="1"
+            android:ellipsize="end"
+            android:text="UI/UX Design"
+            android:textColor="#171717"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/view_profile_button"
+            android:layout_width="match_parent"
+            android:layout_height="42dp"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:background="@drawable/bg_discover_outline_pill"
+            android:text="VIEW FULL PROFILE  ›"
+            android:textColor="#171717"
+            android:textSize="12sp"
+            android:fontFamily="sans-serif-medium"
+            android:clickable="true"
+            android:focusable="true" />
+
+    </LinearLayout>
+
+    <!-- Empty state -->
+    <TextView
+        android:id="@+id/discover_empty"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="20dp"
+        android:gravity="center"
+        android:text="YOU'VE MET EVERYONE FOR NOW.&#10;Check back for your next connection."
+        android:textColor="#171717"
+        android:textSize="20sp"
+        android:fontFamily="@font/big_shoulders_extrabold"
+        android:visibility="gone" />
+
+    <!-- Action buttons -->
+    <LinearLayout
+        android:id="@+id/discover_actions"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:layout_marginBottom="8dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/pass_person"
+            android:layout_width="58dp"
+            android:layout_height="58dp"
+            android:padding="18dp"
+            android:background="@drawable/bg_discover_action"
+            android:src="@drawable/ic_pass"
+            android:scaleType="fitCenter"
+            android:contentDescription="Pass on student"
+            android:clickable="true"
+            android:focusable="true" />
+
+        <ImageView
+            android:id="@+id/like_person"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginEnd="24dp"
+            android:padding="19dp"
+            android:background="@drawable/bg_discover_action_primary"
+            android:src="@drawable/ic_connect_add"
+            android:scaleType="fitCenter"
+            android:contentDescription="Connect with student"
+            android:clickable="true"
+            android:focusable="true" />
+
+        <ImageView
+            android:id="@+id/undo_person"
+            android:layout_width="58dp"
+            android:layout_height="58dp"
+            android:padding="18dp"
+            android:background="@drawable/bg_discover_action"
+            android:src="@drawable/ic_rotate_ccw"
+            android:scaleType="fitCenter"
+            android:contentDescription="Undo last action"
+            android:clickable="true"
+            android:focusable="true" />
+
+    </LinearLayout>
+
+    <!-- Animated connection message composer -->
+    <LinearLayout
+        android:id="@+id/connect_composer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginBottom="8dp"
+        android:orientation="vertical"
+        android:padding="14dp"
+        android:background="@drawable/bg_discover_card"
+        android:visibility="gone"
+        android:alpha="0"
+        android:translationY="18dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="SAY HELLO."
+            android:textColor="#171717"
+            android:textSize="28sp"
+            android:fontFamily="@font/big_shoulders_extrabold" />
+
+        <TextView
+            android:id="@+id/connect_hint"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:text="Make it personal. What would you like to learn from them?"
+            android:textColor="#716B62"
+            android:textSize="12sp" />
+
+        <EditText
+            android:id="@+id/connect_message"
+            android:layout_width="match_parent"
+            android:layout_height="104dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/bg_search"
+            android:gravity="top|start"
+            android:hint="Hey! I noticed you're interested in..."
+            android:inputType="textCapSentences|textMultiLine"
+            android:maxLength="300"
+            android:padding="12dp"
+            android:textColor="#171717"
+            android:textColorHint="#81786E"
+            android:textSize="14sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:id="@+id/cancel_connect"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="CANCEL"
+                android:textColor="#171717"
+                android:textSize="12sp"
+                android:fontFamily="sans-serif-medium"
+                android:clickable="true"
+                android:focusable="true" />
+
+            <TextView
+                android:id="@+id/send_connect"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1.5"
+                android:background="@drawable/bg_discover_action_primary"
+                android:gravity="center"
+                android:text="SEND REQUEST  ↗"
+                android:textColor="#FFFFFF"
+                android:textSize="12sp"
+                android:fontFamily="sans-serif-medium"
+                android:clickable="true"
+                android:focusable="true" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/like_feedback"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="0dp"
+        android:gravity="center"
+        android:textColor="#171717"
+        android:textSize="12sp" />
+
+    <!-- Floating bottom navigation -->
+    <FrameLayout
+    android:layout_width="match_parent"
+    android:layout_height="64dp"
+    android:layout_marginStart="24dp"
+    android:layout_marginEnd="24dp"
+    android:layout_marginTop="2dp"
+    android:layout_marginBottom="8dp"
+    android:id="@+id/nav_island"
+    android:padding="7dp"
+    android:background="@drawable/bg_discover_nav_island"
+    android:elevation="8dp"
+    android:clipChildren="false"
+    android:clipToPadding="false">
+
+    <View
+        android:id="@+id/nav_active_pill"
+        android:layout_width="1dp"
+        android:layout_height="1dp"
+        android:background="@drawable/bg_discover_nav_active" />
+
+    <LinearLayout
+        android:id="@+id/nav_items_row"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+
+        <ImageView
+            android:id="@+id/nav_discover"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:padding="13dp"
+            android:src="@drawable/ic_house"
+            android:tint="#171717"
+            android:scaleType="fitCenter"
+            android:contentDescription="Discover"
+            android:clickable="true"
+            android:focusable="true" />
+
+        <ImageView
+            android:id="@+id/nav_connect"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:padding="13dp"
+            android:src="@drawable/ic_users_round"
+            android:tint="#171717"
+            android:scaleType="fitCenter"
+            android:contentDescription="Connect"
+            android:clickable="true"
+            android:focusable="true" />
+
+        <ImageView
+            android:id="@+id/nav_chats"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:padding="13dp"
+            android:src="@drawable/ic_message_circle"
+            android:tint="#171717"
+            android:scaleType="fitCenter"
+            android:contentDescription="Chats"
+            android:clickable="true"
+            android:focusable="true" />
+
+        <ImageView
+            android:id="@+id/nav_profile"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:padding="13dp"
+            android:src="@drawable/ic_user_circle"
+            android:tint="#171717"
+            android:scaleType="fitCenter"
+            android:contentDescription="Your profile"
+            android:clickable="true"
+            android:focusable="true" />
+
+    
+    </LinearLayout>
+</FrameLayout>
+
+</LinearLayout>

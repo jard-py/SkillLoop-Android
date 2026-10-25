@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/connect_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/skillloop_orange">
+
+    <ScrollView
+        android:id="@+id/connect_scroll"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:fillViewport="true"
+        android:clipToPadding="false"
+        android:overScrollMode="never">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingStart="20dp"
+            android:paddingEnd="20dp"
+            android:paddingTop="18dp"
+            android:paddingBottom="16dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="CONNECT"
+                android:textColor="@color/skillloop_black"
+                android:textSize="27sp"
+                android:fontFamily="@font/big_shoulders_extrabold"
+                android:includeFontPadding="false" />
+
+            <!-- Main editorial heading -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="YOUR NEXT\nCOLLABORATION."
+                android:textColor="@color/skillloop_black"
+                android:textSize="46sp"
+                android:fontFamily="@font/big_shoulders_extrabold"
+                android:lineSpacingMultiplier="0.86"
+                android:includeFontPadding="false" />
+
+            <!-- Incoming heading and live count -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="26dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="INCOMING"
+                    android:textColor="@color/skillloop_black"
+                    android:textSize="27sp"
+                    android:fontFamily="@font/big_shoulders_extrabold"
+                    android:includeFontPadding="false" />
+
+                <TextView
+                    android:id="@+id/request_count"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="00 REQUESTS"
+                    android:textColor="@color/skillloop_black"
+                    android:textSize="10sp"
+                    android:fontFamily="sans-serif-medium" />
+
+            </LinearLayout>
+
+            <!-- Requests are stacked vertically -->
+            <LinearLayout
+                android:id="@+id/requests_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="14dp"
+                android:orientation="vertical" />
+
+            <!-- Empty state -->
+            <LinearLayout
+                android:id="@+id/connect_empty"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:paddingTop="42dp"
+                android:paddingBottom="42dp"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/connect_empty_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="NO NEW REQUESTS."
+                    android:gravity="center"
+                    android:textColor="@color/skillloop_black"
+                    android:textSize="30sp"
+                    android:fontFamily="@font/big_shoulders_extrabold"
+                    android:includeFontPadding="false" />
+
+                <TextView
+                    android:id="@+id/connect_empty_subtitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="Your next collaboration is out there."
+                    android:gravity="center"
+                    android:textColor="@color/skillloop_black"
+                    android:textSize="14sp" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <!-- Shared floating navigation island -->
+    <FrameLayout
+    android:layout_width="match_parent"
+    android:layout_height="64dp"
+    android:layout_marginStart="22dp"
+    android:layout_marginEnd="22dp"
+    android:layout_marginTop="4dp"
+    android:layout_marginBottom="8dp"
+    android:id="@+id/nav_island"
+    android:padding="7dp"
+    android:background="@drawable/bg_discover_nav_island"
+    android:elevation="8dp"
+    android:clipChildren="false"
+    android:clipToPadding="false">
+
+    <View
+        android:id="@+id/nav_active_pill"
+        android:layout_width="1dp"
+        android:layout_height="1dp"
+        android:background="@drawable/bg_discover_nav_active" />
+
+    <LinearLayout
+        android:id="@+id/nav_items_row"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+
+        <ImageView
+            android:id="@+id/nav_discover"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:padding="13dp"
+            android:src="@drawable/ic_house"
+            android:tint="#171717"
+            android:scaleType="fitCenter"
+            android:contentDescription="Discover"
+            android:clickable="true"
+            android:focusable="true" />
+
+        <ImageView
+            android:id="@+id/nav_connect"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:padding="13dp"
+            android:src="@drawable/ic_users_round"
+            android:tint="#171717"
+            android:scaleType="fitCenter"
+            android:contentDescription="Connect"
+            android:clickable="true"
+            android:focusable="true" />
+
+        <ImageView
+            android:id="@+id/nav_chats"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:padding="13dp"
+            android:src="@drawable/ic_message_circle"
+            android:tint="#171717"
+            android:scaleType="fitCenter"
+            android:contentDescription="Chats"
+            android:clickable="true"
+            android:focusable="true" />
+
+        <ImageView
+            android:id="@+id/nav_profile"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:padding="13dp"
+            android:src="@drawable/ic_user_circle"
+            android:tint="#171717"
+            android:scaleType="fitCenter"
+            android:contentDescription="Your profile"
+            android:clickable="true"
+            android:focusable="true" />
+
+    
+    </LinearLayout>
+</FrameLayout>
+
+</LinearLayout>

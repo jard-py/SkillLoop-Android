@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="skillloop_orange">#FF5A00</color>
+    <color name="skillloop_black">#171717</color>
+    <color name="skillloop_white">#FFFFFF</color>
+    <color name="skillloop_cream">#F2F0EB</color>
+    <color name="skillloop_grey">#77736C</color>
+    <color name="skillloop_surface">#F8F6F1</color>
+</resources>

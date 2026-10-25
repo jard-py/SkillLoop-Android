@@ -1,0 +1,526 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/profile_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#FF5A00"
+    android:paddingTop="4dp">
+
+    <ScrollView
+        android:id="@+id/profile_scroll"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:fillViewport="true"
+        android:clipToPadding="false">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingStart="20dp"
+            android:paddingEnd="20dp"
+            android:paddingTop="12dp"
+            android:paddingBottom="20dp">
+
+            <!-- Header -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="SKILLLOOP / YOUR SPACE"
+                    android:textColor="#171717"
+                    android:textSize="11sp"
+                    android:letterSpacing="0.12"
+                    android:fontFamily="sans-serif-medium" />
+
+                <ImageView
+                    android:id="@+id/edit_profile"
+                    android:layout_width="44dp"
+                    android:layout_height="44dp"
+                    android:padding="11dp"
+                    android:background="@drawable/bg_discover_action"
+                    android:src="@drawable/ic_edit"
+                    android:tint="#171717"
+                    android:contentDescription="Edit profile"
+                    android:clickable="true"
+                    android:focusable="true" />
+
+                <ImageView
+                    android:id="@+id/save_profile_icon"
+                    android:layout_width="44dp"
+                    android:layout_height="44dp"
+                    android:layout_marginStart="8dp"
+                    android:padding="11dp"
+                    android:background="@drawable/bg_discover_action_primary"
+                    android:src="@drawable/ic_square_check_big"
+                    android:tint="#FFFFFF"
+                    android:contentDescription="Save profile"
+                    android:visibility="gone"
+                    android:clickable="true"
+                    android:focusable="true" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/profile_heading"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:text="YOUR SPACE."
+                android:textColor="#171717"
+                android:textSize="42sp"
+                android:fontFamily="@font/big_shoulders_extrabold"
+                android:includeFontPadding="false" />
+
+            <TextView
+                android:id="@+id/profile_subtitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:text="Your skills are your introduction."
+                android:textColor="#171717"
+                android:textSize="14sp" />
+
+            <!-- Main profile card -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:orientation="vertical"
+                android:background="@drawable/bg_discover_card"
+                android:padding="14dp">
+
+                <!-- Profile photo -->
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="190dp"
+                    android:background="@drawable/bg_discover_hero">
+
+                    <ImageView
+                        android:id="@+id/profile_photo"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="centerCrop"
+                        android:contentDescription="Profile photo" />
+
+                    <TextView
+                        android:id="@+id/profile_initials"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:text="YOU"
+                        android:textColor="#756657"
+                        android:textSize="68sp"
+                        android:fontFamily="@font/big_shoulders_extrabold"
+                        android:includeFontPadding="false" />
+
+                    <TextView
+                        android:id="@+id/change_photo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom|end"
+                        android:layout_margin="10dp"
+                        android:paddingStart="13dp"
+                        android:paddingEnd="13dp"
+                        android:paddingTop="9dp"
+                        android:paddingBottom="9dp"
+                        android:background="@drawable/bg_discover_badge"
+                        android:text="CHANGE PHOTO +"
+                        android:textColor="#FFFFFF"
+                        android:textSize="10sp"
+                        android:visibility="gone"
+                        android:clickable="true"
+                        android:focusable="true" />
+
+                </FrameLayout>
+
+                <!-- Name -->
+                <TextView
+                    android:id="@+id/view_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:text="YOUR NAME"
+                    android:textColor="#171717"
+                    android:textSize="34sp"
+                    android:fontFamily="@font/big_shoulders_extrabold"
+                    android:includeFontPadding="false" />
+
+                <EditText
+                    android:id="@+id/input_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:hint="Your name"
+                    android:inputType="textCapWords"
+                    android:singleLine="true"
+                    android:paddingStart="12dp"
+                    android:paddingEnd="12dp"
+                    android:background="@drawable/bg_search"
+                    android:textColor="#171717"
+                    android:textColorHint="#716B62"
+                    android:visibility="gone" />
+
+                <!-- Course and year in view mode -->
+                <TextView
+                    android:id="@+id/view_course_year"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:text="COURSE · YEAR"
+                    android:textColor="#716B62"
+                    android:textSize="11sp"
+                    android:letterSpacing="0.035" />
+
+                <!-- Course and year in edit mode -->
+                <LinearLayout
+                    android:id="@+id/edit_course_year"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp"
+                        android:text="COURSE / BRANCH"
+                        android:textColor="#171717"
+                        android:textSize="11sp" />
+
+                    <EditText
+                        android:id="@+id/input_course"
+                        android:layout_width="match_parent"
+                        android:layout_height="48dp"
+                        android:hint="Course or branch"
+                        android:singleLine="true"
+                        android:paddingStart="12dp"
+                        android:paddingEnd="12dp"
+                        android:background="@drawable/bg_search"
+                        android:textColor="#171717"
+                        android:textColorHint="#716B62" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="YEAR OF STUDY"
+                        android:textColor="#171717"
+                        android:textSize="11sp" />
+
+                    <EditText
+                        android:id="@+id/input_year"
+                        android:layout_width="match_parent"
+                        android:layout_height="48dp"
+                        android:hint="e.g. Year 3"
+                        android:singleLine="true"
+                        android:paddingStart="12dp"
+                        android:paddingEnd="12dp"
+                        android:background="@drawable/bg_search"
+                        android:textColor="#171717"
+                        android:textColorHint="#716B62" />
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="14dp"
+                    android:layout_marginBottom="12dp"
+                    android:background="#D8D2C8" />
+
+                <!-- Domain -->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="YOUR DOMAIN"
+                    android:textColor="#716B62"
+                    android:textSize="10sp"
+                    android:letterSpacing="0.08" />
+
+                <TextView
+                    android:id="@+id/view_domain"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="Technology"
+                    android:textColor="#171717"
+                    android:textSize="16sp" />
+
+                <EditText
+                    android:id="@+id/input_domain"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:layout_marginTop="4dp"
+                    android:hint="Technology, Business, Design..."
+                    android:singleLine="true"
+                    android:paddingStart="12dp"
+                    android:paddingEnd="12dp"
+                    android:background="@drawable/bg_search"
+                    android:textColor="#171717"
+                    android:textColorHint="#716B62"
+                    android:visibility="gone" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="14dp"
+                    android:layout_marginBottom="12dp"
+                    android:background="#D8D2C8" />
+
+                <!-- Bio -->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="A LITTLE ABOUT YOU"
+                    android:textColor="#716B62"
+                    android:textSize="10sp"
+                    android:letterSpacing="0.08" />
+
+                <TextView
+                    android:id="@+id/view_bio"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:text="Learning, sharing, and building together."
+                    android:textColor="#171717"
+                    android:textSize="14sp" />
+
+                <EditText
+                    android:id="@+id/input_bio"
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp"
+                    android:layout_marginTop="5dp"
+                    android:gravity="top"
+                    android:hint="Write a short introduction"
+                    android:inputType="textCapSentences|textMultiLine"
+                    android:padding="12dp"
+                    android:background="@drawable/bg_search"
+                    android:textColor="#171717"
+                    android:textColorHint="#716B62"
+                    android:visibility="gone" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="14dp"
+                    android:layout_marginBottom="12dp"
+                    android:background="#D8D2C8" />
+
+                <!-- Skills I can teach -->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="CAN TEACH"
+                    android:textColor="#716B62"
+                    android:textSize="10sp"
+                    android:letterSpacing="0.08" />
+
+                <TextView
+                    android:id="@+id/view_teaches"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="Add the skills you can share"
+                    android:textColor="#171717"
+                    android:textSize="15sp" />
+
+                <EditText
+                    android:id="@+id/input_teaches"
+                    android:layout_width="match_parent"
+                    android:layout_height="76dp"
+                    android:layout_marginTop="4dp"
+                    android:gravity="top"
+                    android:hint="Skills you're happy to share"
+                    android:inputType="textCapSentences|textMultiLine"
+                    android:padding="12dp"
+                    android:background="@drawable/bg_search"
+                    android:textColor="#171717"
+                    android:textColorHint="#716B62"
+                    android:visibility="gone" />
+
+                <!-- Skills I want to learn -->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:text="WANTS TO LEARN"
+                    android:textColor="#716B62"
+                    android:textSize="10sp"
+                    android:letterSpacing="0.08" />
+
+                <TextView
+                    android:id="@+id/view_wants"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="Skills you'd like to learn"
+                    android:textColor="#171717"
+                    android:textSize="15sp" />
+
+                <EditText
+                    android:id="@+id/input_wants"
+                    android:layout_width="match_parent"
+                    android:layout_height="76dp"
+                    android:layout_marginTop="4dp"
+                    android:gravity="top"
+                    android:hint="What you'd like to learn"
+                    android:inputType="textCapSentences|textMultiLine"
+                    android:padding="12dp"
+                    android:background="@drawable/bg_search"
+                    android:textColor="#171717"
+                    android:textColorHint="#716B62"
+                    android:visibility="gone" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="14dp"
+                    android:layout_marginBottom="12dp"
+                    android:background="#D8D2C8" />
+
+                <!-- Current project -->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="CURRENTLY BUILDING"
+                    android:textColor="#716B62"
+                    android:textSize="10sp"
+                    android:letterSpacing="0.08" />
+
+                <TextView
+                    android:id="@+id/view_project"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="Tell people what you're working on"
+                    android:textColor="#171717"
+                    android:textSize="15sp" />
+
+                <EditText
+                    android:id="@+id/input_project"
+                    android:layout_width="match_parent"
+                    android:layout_height="76dp"
+                    android:layout_marginTop="4dp"
+                    android:gravity="top"
+                    android:hint="Tell people about your project"
+                    android:inputType="textCapSentences|textMultiLine"
+                    android:padding="12dp"
+                    android:background="@drawable/bg_search"
+                    android:textColor="#171717"
+                    android:textColorHint="#716B62"
+                    android:visibility="gone" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/sign_out_button"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="8dp"
+                android:background="@drawable/bg_discover_outline_pill"
+                android:clickable="true"
+                android:focusable="true"
+                android:gravity="center"
+                android:text="SIGN OUT OF SKILLLOOP"
+                android:textColor="@color/skillloop_black"
+                android:textSize="12sp"
+                android:visibility="gone" />
+
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- Floating navigation island -->
+    <FrameLayout
+    android:layout_width="match_parent"
+    android:layout_height="64dp"
+    android:layout_marginStart="24dp"
+    android:layout_marginEnd="24dp"
+    android:layout_marginTop="4dp"
+    android:layout_marginBottom="8dp"
+    android:id="@+id/nav_island"
+    android:padding="7dp"
+    android:background="@drawable/bg_discover_nav_island"
+    android:elevation="8dp"
+    android:clipChildren="false"
+    android:clipToPadding="false">
+
+    <View
+        android:id="@+id/nav_active_pill"
+        android:layout_width="1dp"
+        android:layout_height="1dp"
+        android:background="@drawable/bg_discover_nav_active" />
+
+    <LinearLayout
+        android:id="@+id/nav_items_row"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+
+        <ImageView
+            android:id="@+id/nav_discover"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:padding="13dp"
+            android:src="@drawable/ic_house"
+            android:tint="#171717"
+            android:scaleType="fitCenter"
+            android:contentDescription="Discover"
+            android:clickable="true"
+            android:focusable="true" />
+
+        <ImageView
+            android:id="@+id/nav_connect"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:padding="13dp"
+            android:src="@drawable/ic_users_round"
+            android:tint="#171717"
+            android:scaleType="fitCenter"
+            android:contentDescription="Connect"
+            android:clickable="true"
+            android:focusable="true" />
+
+        <ImageView
+            android:id="@+id/nav_chats"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:padding="13dp"
+            android:src="@drawable/ic_message_circle"
+            android:tint="#171717"
+            android:scaleType="fitCenter"
+            android:contentDescription="Chats"
+            android:clickable="true"
+            android:focusable="true" />
+
+        <ImageView
+            android:id="@+id/nav_profile"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:padding="13dp"
+            android:src="@drawable/ic_user_circle"
+            android:tint="#171717"
+            android:scaleType="fitCenter"
+            android:contentDescription="Your profile"
+            android:clickable="true"
+            android:focusable="true" />
+
+    
+    </LinearLayout>
+</FrameLayout>
+
+</LinearLayout>

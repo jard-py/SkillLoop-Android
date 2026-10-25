@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "899360658978",
+    "project_id": "skillloop-8ef7e",
+    "storage_bucket": "skillloop-8ef7e.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:899360658978:android:4572fb5b1d06e218c15c7b",
+        "android_client_info": {
+          "package_name": "com.example.skillloop"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC2ug-VSiiVrPxbMGklSx-Q8uJPsAHmWzM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

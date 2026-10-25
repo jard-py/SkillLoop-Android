@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/discover_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/skillloop_cream">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:fillViewport="true"
+        android:clipToPadding="false">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingStart="22dp"
+            android:paddingEnd="22dp"
+            android:paddingTop="18dp"
+            android:paddingBottom="20dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-medium"
+                android:letterSpacing="0.12"
+                android:text="SKILLLOOP / DISCOVER"
+                android:textColor="@color/skillloop_grey"
+                android:textSize="10sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:fontFamily="@font/skillloop_display"
+                android:lineSpacingMultiplier="0.85"
+                android:text="FIND YOUR\nPEOPLE."
+                android:textColor="@color/skillloop_black"
+                android:textSize="48sp" />
+
+            <EditText
+                android:id="@+id/search_people"
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:layout_marginTop="22dp"
+                android:background="@drawable/bg_search"
+                android:hint="Search people or skills"
+                android:paddingStart="18dp"
+                android:paddingEnd="18dp"
+                android:singleLine="true"
+                android:inputType="text"
+                android:textColor="@color/skillloop_black"
+                android:textColorHint="@color/skillloop_grey"
+                android:textSize="14sp" />
+
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:scrollbars="none">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/filter_all"
+                        android:layout_width="wrap_content"
+                        android:layout_height="40dp"
+                        android:layout_marginEnd="8dp"
+                        android:background="@drawable/bg_filter_selected"
+                        android:gravity="center"
+                        android:paddingStart="18dp"
+                        android:paddingEnd="18dp"
+                        android:text="Everyone"
+                        android:textColor="@color/skillloop_white"
+                        android:textSize="13sp" />
+
+                    <TextView
+                        android:id="@+id/filter_tech"
+                        android:layout_width="wrap_content"
+                        android:layout_height="40dp"
+                        android:layout_marginEnd="8dp"
+                        android:background="@drawable/bg_filter"
+                        android:gravity="center"
+                        android:paddingStart="18dp"
+                        android:paddingEnd="18dp"
+                        android:text="Technology"
+                        android:textColor="@color/skillloop_black"
+                        android:textSize="13sp" />
+
+                    <TextView
+                        android:id="@+id/filter_design"
+                        android:layout_width="wrap_content"
+                        android:layout_height="40dp"
+                        android:layout_marginEnd="8dp"
+                        android:background="@drawable/bg_filter"
+                        android:gravity="center"
+                        android:paddingStart="18dp"
+                        android:paddingEnd="18dp"
+                        android:text="Design"
+                        android:textColor="@color/skillloop_black"
+                        android:textSize="13sp" />
+
+                    <TextView
+                        android:id="@+id/filter_business"
+                        android:layout_width="wrap_content"
+                        android:layout_height="40dp"
+                        android:background="@drawable/bg_filter"
+                        android:gravity="center"
+                        android:paddingStart="18dp"
+                        android:paddingEnd="18dp"
+                        android:text="Business"
+                        android:textColor="@color/skillloop_black"
+                        android:textSize="13sp" />
+
+                </LinearLayout>
+            </HorizontalScrollView>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="26dp"
+                android:fontFamily="@font/skillloop_display"
+                android:text="PEOPLE TO KNOW"
+                android:textColor="@color/skillloop_black"
+                android:textSize="25sp" />
+
+            <LinearLayout
+                android:id="@+id/people_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:orientation="vertical" />
+
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- Bottom navigation -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:background="@color/skillloop_surface"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingStart="10dp"
+        android:paddingEnd="10dp">
+
+        <TextView
+            android:id="@+id/nav_discover"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="DISCOVER"
+            android:textColor="@color/skillloop_orange"
+            android:textSize="10sp" />
+
+        <TextView
+            android:id="@+id/nav_connect"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="CONNECT"
+            android:textColor="@color/skillloop_grey"
+            android:textSize="10sp" />
+
+        <TextView
+            android:id="@+id/nav_chats"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="CHATS"
+            android:textColor="@color/skillloop_grey"
+            android:textSize="10sp" />
+
+        <TextView
+            android:id="@+id/nav_profile"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="YOU"
+            android:textColor="@color/skillloop_grey"
+            android:textSize="10sp" />
+
+    </LinearLayout>
+
+</LinearLayout>
